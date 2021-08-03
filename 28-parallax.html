@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <style>
+        html{
+            scroll-behavior: smooth;
+            /* 使網頁標籤轉換產生滑順效果 */
+        }
+        *{
+            margin:unset;
+            
+        }
+        body{
+             padding-top:50px;
+        }
+        /* 指引BAR偽類 */
+        .warsaw:hover{
+            color: brown;
+
+        }
+        .warsaw:link{
+            color:black;
+
+        }
+        .warsaw:visited{
+            color:black;
+
+        }
+        .krakow:hover{
+            color:brown;
+            
+
+        }
+        .krakow:link{
+            color:black;
+            
+
+        }
+        .krakow:visited{
+            color:black;
+            
+            
+        }
+        .poznan:link{
+            color: black;
+            
+
+        }
+        .poznan:hover{
+            color:brown;
+            
+
+        }
+        .poznan:visited{
+            color:black;
+            
+
+        }
+        .gdansk:link{
+            color: black;
+
+        }
+        .gdansk:hover{
+            color:brown;
+            
+
+        }
+        .gdansk:visited{
+            color: black;
+
+        }
+        /* 指引BAR屬性 */
+        .warsaw{
+            display: inline-block;
+            /* 讓他同時有inline與block的特性  */
+            width: 100px;
+            height: 50px;
+            /* border:2px  black solid; */
+            background-color:burlywood;
+            text-align:center;
+
+        }
+        .krakow{
+            display: inline-block;
+            /* 讓他同時有inline與block的特性  */
+            width: 120px;
+            height: 50px;
+            /* border:2px  black solid; */
+            background-color:burlywood;
+            text-align:center;
+        }
+        .poznan{
+            display: inline-block;
+            /* 讓他同時有inline與block的特性  */
+            width: 100px;
+            height: 50px;
+            /* border:2px  black solid; */
+            background-color:burlywood;
+            text-align:center;
+        }
+        .gdansk{
+            display: inline-block;
+            /* 讓他同時有inline與block的特性  */
+            width: 120px;
+            height: 50px;
+            /* border:2px  black solid; */
+            background-color:burlywood;
+            text-align:center;
+        }
+        nav{
+            height: 50px;
+            width: 100%;
+            background-color:cadetblue;
+            line-height: 50px;
+            /* padding: 0px 50px; */
+            position: fixed;
+            top:0px;
+            left: 0px;
+            z-index: 1;/* 圖層移至最前的概念 */
+        }
+        /* 各城市照片 */
+        .warsaw-pic{
+            width: 100%;
+            height: 1000px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url("parallax-波蘭城市/warsaw.jpg");
+            background-position: center;
+            margin: auto;
+            position: relative;
+            background-attachment: fixed;
+        }
+        .krakow-pic{
+            width: 100%;
+            height: 1000px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url("parallax-波蘭城市/Kraków.jpg");
+            background-position: center;
+            margin: auto;
+            position: relative;
+            background-attachment: fixed;
+        }
+        .poznan-pic{
+            width: 100%;
+            height: 1000px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url("parallax-波蘭城市/Poznań.jpg");
+            background-position: center;
+            margin: auto;
+            position: relative;
+            background-attachment: fixed;
+        }
+        .gdansk-pic{
+            width: 100%;
+            height: 1000px;
+            
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url("parallax-波蘭城市/gdansk.jpg");
+            background-position: center;
+            margin: auto;
+            position: relative;
+            background-attachment: fixed;
+        }
+        /* 各城市標題 */
+        .warsaw-txt{
+            width: 300px;
+            height:30px;
+            background-color: gray;
+            color: white;
+            text-align:center;
+            position: absolute;
+            top:calc(50% - 15px);
+            left:calc(50% - 150px);
+            font-size: 20px;
+
+
+            
+        }
+        .krakow-txt{
+            width: 300px;
+            height:30px;
+            background-color: gray;
+            color: white;
+            text-align:center;
+            position: absolute;
+            top:calc(50% - 15px);
+            left:calc(50% - 150px);
+            font-size: 20px;
+            
+
+        }
+        .poznan-txt{
+            width: 300px;
+            height:30px;
+            background-color: gray;
+            color: white;
+            text-align:center;
+            position: absolute;
+            top:calc(50% - 15px);
+            left:calc(50% - 150px);
+            font-size: 20px;
+            
+            
+        }
+        .gdansk-txt{
+            width: 300px;
+            height:30px;
+            background-color: gray;
+            color: white;
+            text-align:center;
+            position: absolute;
+            top:calc(50% - 15px);
+            left:calc(50% - 150px);
+            font-size: 20px;
+           
+        }
+        /* 各城市介紹文字 */
+        .warsaw-inner{
+            width: 100%;
+            height: 150px;
+            background-color: darkslategrey;
+            color:white;
+            margin: auto;
+            text-align:center;
+            
+        }
+        .krakow-inner{
+            width: 100%;
+            height:200px;
+            background-color: darkslategrey;
+            color:white;
+            margin: auto;
+            text-align:center;
+        }
+        .poznan-inner{
+            width: 100%;
+            height: 150px;
+            background-color: darkslategrey;
+            color:white;
+            margin: auto;
+            text-align:center;
+        }
+        .gdansk-inner{
+            width: 100%;
+            height: 150px;
+            background-color: darkslategrey;
+            color:white;
+            margin: auto;
+            text-align:center;
+        }
+        /* 設灰色BAR參照點 */
+        .war{
+
+            position:absolute;
+            top:-50px;
+        }
+        .kra{
+            position:absolute;
+            top:-50px;
+        }
+        .poz{
+            position:absolute;
+            top:-50px;
+        }
+        .gda{
+            position:absolute;
+            top:-50px;
+        }
+
+
+
+    </style>
+
+<body>
+    <nav>
+        <!-- 在超連結中，herf填上# + id 即可連到頁面中指定的位置 -->
+        <a class="warsaw" href="#anchor-War"> 華沙warsaw </a><a class="krakow" href="#anchor-Kra"> 克拉克夫Kraków </a><a class="poznan"href="#anchor-Poz"> 波茲南Poznań</a><a class="gdansk" href="#anchor-Gda"> 格但斯克Gdańsk </a>
+    </nav>
+
+    <div class="warsaw-pic">
+        <div class="warsaw-txt" >華沙warsaw
+            <div class="war" id="anchor-War"></div>
+        </div>
+    </div>
+    <div class="warsaw-inner">華沙是波蘭首都及最大城市，位於維斯拉河兩岸，距波羅的海和喀爾巴阡山脈大約350公里。2008年人口數字爲1,707,983人，都市圈人口大約2,785,000人。城市面積512平方公里，都市圈面積12266平方公里。冷戰時期著名的華沙公約就是於此簽署的。 </div>
+
+    <div class="krakow-pic">
+        <div class="krakow-txt">克拉克夫Kraków
+            <div class="kra" id="anchor-Kra"></div>
+        </div>
+    </div>
+    <div class="krakow-inner">克拉科夫是波蘭第二大城市，為小波蘭省首府，也是波蘭的舊都。位於波蘭南部，鄰近克拉科夫-琴斯托霍瓦高地，維斯瓦河貫穿市區，全市人口約76萬人。在波蘭歷史上，克拉科夫自1038年起成為首都，直至1596年遷都華沙為止；波蘭在1795年至1918年亡國期間，則以該城為中心先後建立了克拉科夫自由市及克拉科夫大公國。</div>
+
+    <div class="poznan-pic">
+        <div class="poznan-txt">波茲南Poznań
+            <div class="poz" id="anchor-Poz"></div>
+        </div>
+    </div>
+    <div class="poznan-inner">波茲南是波蘭中西部大波蘭地區瓦爾塔河沿岸的一座城市，是波蘭第五大城市。它是波蘭最古老的城市之一，也是該國重要的歷史、經濟和文化中心。截至2019年，波茲南人口為534,813人，而整個波茲南都會區的居住人口超過了100萬。它是大波蘭地區的歷史首府，現在則是大波蘭省的省會。</div>
+
+    <div class="gdansk-pic">
+        <div class="gdansk-txt">格但斯克Gdańsk
+            <div class="gda" id="anchor-Gda"></div>
+        </div>
+    </div>
+    <div class="gdansk-inner">格但斯克Gdańsk，德語稱但澤，是波蘭波美拉尼亞省的省會，也是該國北部沿海地區的最大城市和最重要的海港。 在漢薩同盟時代以來的600多年間，格但斯克始終是波羅的海沿岸地區一個重要的航運與貿易中心。雖然在歷次的戰爭中曾經幾度衰落，但是，在每次衰落之後不久，格但斯克都能夠利用它的區位優勢，恢復過去的繁榮。 </div>
+    
+    
+</html>
